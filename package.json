@@ -1,0 +1,24 @@
+{
+  "name": "habit-bench",
+  "version": "1.0.0",
+  "description": "Measurement instrument for the bachelor thesis: 18 black-box test cases, axe-core and Lighthouse on builds of the community habit tracker, plus counting of ZAP, OSV-Scanner, CodeQL and SonarQube reports.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "postinstall": "playwright install chromium",
+    "test:build": "node habit-tests.mjs",
+    "count:tools": "node count-tools.mjs"
+  },
+  "dependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "axe-core": "4.14.0",
+    "lighthouse": "13.6.0",
+    "playwright": "1.63.0"
+  },
+  "overrides": {
+    "axe-core": "4.14.0"
+  }
+}
